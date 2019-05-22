@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<unit id='io.github.che4.p2.categories.che4.ux' version='${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${buildCounter}'>
+	<properties size='3'>
+		<property name='org.eclipse.equinox.p2.name' value='User Experience'/>
+		<property name='org.eclipse.equinox.p2.description' value='User experience features for Eclipse RCP'/>
+		<property name='org.eclipse.equinox.p2.type.category' value='true'/>
+	</properties>
+</unit>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.github.che4</groupId>
+		<artifactId>io.github.che4.p2.categories</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>io.github.che4</groupId>
+	<artifactId>io.github.che4.p2.categories.bom</artifactId>
+	<packaging>pom</packaging>
+	<name>Che4 :: Categories :: BOM</name>
+	<description>Che4 categories dependencies to be included in Maven (Tycho) build of p2 update sites</description>
+	<inceptionYear>2019</inceptionYear>
+	
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- che4 -->
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2metadata</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2artifacts</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<type>p2-installable-unit</type>
+			</dependency>
+			<!-- che4/i18n -->
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2metadata</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2artifacts</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<type>p2-installable-unit</type>
+			</dependency>
+			<!-- che4/ux -->
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2metadata</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<classifier>p2artifacts</classifier>
+				<type>xml</type>
+			</dependency>
+			<dependency>
+				<groupId>io.github.che4</groupId>
+				<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+				<type>p2-installable-unit</type>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+
+	<dependencies>
+
+		<!-- che4 -->
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2metadata</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2artifacts</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<type>p2-installable-unit</type>
+		</dependency>
+		<!-- che4/i18n -->
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2metadata</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2artifacts</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.i18n</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<type>p2-installable-unit</type>
+		</dependency>
+		<!-- che4/ux -->
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2metadata</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<classifier>p2artifacts</classifier>
+			<type>xml</type>
+		</dependency>
+		<dependency>
+			<groupId>io.github.che4</groupId>
+			<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+			<type>p2-installable-unit</type>
+		</dependency>
+
+	</dependencies>
+</project>

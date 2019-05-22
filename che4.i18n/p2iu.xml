@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<unit id='io.github.che4.p2.categories.che4.i18n' version='0.1.0'>
+	<properties size='3'>
+		<property name='org.eclipse.equinox.p2.name' value='Internationalization'/>
+		<property name='org.eclipse.equinox.p2.description' value='Internationalization support for Eclipse RCP'/>
+		<property name='org.eclipse.equinox.p2.type.category' value='true'/>
+	</properties>
+	<requires size='3'>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.i18n.menu.feature.feature.group' range='[0,1)' optional='true' />
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.i18n.menu.l10n.feature.feature.group' range='[0,1)' optional='true'/>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.i18n.menu.l10n.category.languages' range='[0,1)' optional='true' />
+	</requires>
+</unit>

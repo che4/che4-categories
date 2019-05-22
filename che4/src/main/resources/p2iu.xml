@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<unit id='io.github.che4.p2.categories.che4' version='${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${buildCounter}'>
+	<properties size='3'>
+		<property name='org.eclipse.equinox.p2.name' value='Che4'/>
+		<property name='org.eclipse.equinox.p2.description' value='Che4 root category'/>
+		<property name='org.eclipse.equinox.p2.type.category' value='true'/>
+	</properties>
+	<requires size='2'>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.p2.categories.che4.i18n' range='[${parsedVersion.majorVersion},${parsedVersion.nextMajorVersion})' optional='true' />
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.p2.categories.che4.ux' range='[${parsedVersion.majorVersion},${parsedVersion.nextMajorVersion})' optional='true' />
+	</requires>
+</unit>
