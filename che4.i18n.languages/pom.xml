@@ -6,7 +6,7 @@
 		<artifactId>io.github.che4.p2.categories</artifactId>
 		<version>0.1.5</version>
 	</parent>
-	<artifactId>io.github.che4.p2.categories.che4.ux</artifactId>
-	<name>Che4 :: category :: che4/ux</name>
+	<artifactId>io.github.che4.p2.categories.che4.i18n.languages</artifactId>
+	<name>Che4 :: category :: che4/i18n/languages</name>
 	<packaging>p2-installable-unit</packaging>
 </project>

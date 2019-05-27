@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<unit id='io.github.che4.p2.categories.che4.i18n.languages' version='0.1.5'>
+	<properties size='3'>
+		<property name='org.eclipse.equinox.p2.name' value='Add only selected languages'/>
+		<property name='org.eclipse.equinox.p2.description' value='Additional languages for the Che4 internationalization menu'/>
+		<property name='org.eclipse.equinox.p2.type.category' value='true'/>
+	</properties>
+	<requires size='2'>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.i18n.menu.l10n.ru' range='[0,)' optional='true'/>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.i18n.menu.l10n.tr' range='[0,)' optional='true' />
+	</requires>
+</unit>

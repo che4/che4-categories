@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<iu id="io.github.che4.p2.categories.che4" />
+	<iu id="io.github.che4.p2.categories.che4.i18n" />
+	<iu id="io.github.che4.p2.categories.che4.i18n.languages" />
+	<iu id="io.github.che4.p2.categories.che4.ux" />
+</site>

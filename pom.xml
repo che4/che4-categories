@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.che4</groupId>
 	<artifactId>io.github.che4.p2.categories</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.5</version>
 	<packaging>pom</packaging>
 	<name>Che4 :: Categories :: RELENG </name>
 	<description>Builds categories for Che4 project as Tycho's p2-installable-unit</description>
@@ -99,25 +99,25 @@
 				<resources>
 					<resource>
 						<directory>che4/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4</targetPath>
 					</resource>
 					<resource>
 						<directory>che4.i18n/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4.i18n</targetPath>
 					</resource>
 					<resource>
+						<directory>che4.i18n.languages/src/main/resources</directory>
+						<includes><include>p2iu.xml</include></includes>
+						<filtering>true</filtering>
+						<targetPath>${project.basedir}/che4.i18n.languages</targetPath>
+					</resource>
+					<resource>
 						<directory>che4.ux/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4.ux</targetPath>
 					</resource>
@@ -173,32 +173,34 @@
 			</properties>
 			<build>
 				<defaultGoal>process-resources</defaultGoal>
+
 				<resources>
 					<resource>
 						<directory>che4/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4</targetPath>
 					</resource>
 					<resource>
 						<directory>che4.i18n/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4.i18n</targetPath>
 					</resource>
 					<resource>
+						<directory>che4.i18n.languages/src/main/resources</directory>
+						<includes><include>p2iu.xml</include></includes>
+						<filtering>true</filtering>
+						<targetPath>${project.basedir}/che4.i18n.languages</targetPath>
+					</resource>
+					<resource>
 						<directory>che4.ux/src/main/resources</directory>
-						<includes>
-							<include>p2iu.xml</include>
-						</includes>
+						<includes><include>p2iu.xml</include></includes>
 						<filtering>true</filtering>
 						<targetPath>${project.basedir}/che4.ux</targetPath>
 					</resource>
 				</resources>
+
 				<plugins>
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
@@ -259,12 +261,14 @@
 			<modules>
 				<module>che4</module>
 				<module>che4.i18n</module>
+				<module>che4.i18n.languages</module>
 				<module>che4.ux</module>
 				<module>bom</module>
+				<module>update-site</module>
 			</modules>
 
 			<build>
-				<defaultGoal>install</defaultGoal>
+				<defaultGoal>package</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
