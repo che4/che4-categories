@@ -5,4 +5,7 @@
 		<property name='org.eclipse.equinox.p2.description' value='User experience features for Eclipse RCP'/>
 		<property name='org.eclipse.equinox.p2.type.category' value='true'/>
 	</properties>
+	<requires size='1'>
+		<required namespace='org.eclipse.equinox.p2.iu' name='io.github.che4.splash.feature' range='[0,)' optional='true' />
+	</requires>
 </unit>
