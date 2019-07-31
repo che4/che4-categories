@@ -1,4 +1,6 @@
 language: java
+jdk:
+- openjdk8
 cache:
   directories:
   - "$HOME/.m2"
@@ -7,6 +9,16 @@ cache:
 #before_script:
 #  - chmod +x mvnw
 script: >-
-  mvn --global-settings ./.travis/settings.xml -DforceContextQualifier=$TRAVIS_BUILD_NUMBER &&
-  mvn --global-settings ./.travis/settings.xml deploy
-
+  mvn --global-settings ./.travis/settings.xml -DforceContextQualifier=$TRAVIS_BUILD_NUMBER
+  && mvn --global-settings ./.travis/settings.xml -DbuildBy="Travis CI - $TRAVIS_BUILD_WEB_URL"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  target_branch: gh-pages
+  on:
+    branch: master
+  local_dir: "./update-site/target/repository"
+  github_token: $GITHUB_TOKEN
+env:
+  secure: cDBKeH4VUvEMfhoSSqSgDl9cxYY/K8Cy8O/y+uvNV1kZ+RjvXDsRrpGwOHadX9tcB0h9PafAm8SeP2xBVjJrUwL1uLTCX/SeUAnwanzouaoFMwe3QdRXctcpIoHGoWgLKMoNWHnLEgwixdyixvxG8KIetaTo1v9M/HvPkpS5Oz6s/8hTmTfv0jzaxnFRQkFhNKdFzvv/oSHGzF9yLQm9NsvkLQPf/anZ4zfUdwUwWXk0eUzrmhtVJM6QxLeZ0r1XkXAEAuiqVC5jZIuKD3HXSv83wK18X0IPQag7AFIQSJYnvHlFATf2osOboBigavzu40AB8fWSVGhfXidHAyVyM8f4P65/y21FkvJEmUjdfKEjye9YSdprC8DNLlq7tvXVjQvsd2C1p6AyKudOkVqT3AoD2mg3vpgtxVt6l17LpFu/leeff6+UDeO8BzILSqSN3+yOOPFRIUH9/4nQgYim/LGZ4U7kYNFQYZB/ErLALmc/5OvYZ1VRopVJRWsxaI48axvM/nk0zg/KCNmuO3unKtG5L3KX8Y43LFV4Gfu8UTLtilJ9/0w9ee7+6ZbHOz4VByPicwvBLrRqGD85Vi09JBqlzPlW/QPFPVfGDc7KqJIKBqj2eX1o8l5ghEVvffD52xdB0OAwBiDmcX9dUFjc4hDJe/aYtzmX/YFzD+oo614=
